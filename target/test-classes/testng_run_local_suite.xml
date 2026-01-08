@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Restaurant Hub - Parameterized Suite" verbose="1">
+        <!-- Add ExtentReports Listener -->
+    <listeners>
+        <listener class-name="reportConfig.TestListener"/>
+    </listeners>
+    <!-- Android Test -->
+    <test name="Android - Smoke Test">
+        <parameter name="platform" value="ANDROID"/>
+        <parameter name="deviceName" value="emulator-5554"/>
+        <parameter name="appiumPort" value="4725"/>
+        <classes>
+            <class name="restaurantHub.Smoke_Test_QA_Build"/>
+        </classes>
+    </test>
+    
+    <!-- iOS Test (Future) -->
+    <!-- 
+    <test name="iOS - Smoke Test">
+        <parameter name="platform" value="IOS"/>
+        <parameter name="deviceName" value="iPhone 15"/>
+        <parameter name="appiumPort" value="4729"/>
+        <classes>
+            <class name="restaurantHub.Smoke_Test_QA_Build"/>
+        </classes>
+    </test>
+    -->
+    
+</suite>
